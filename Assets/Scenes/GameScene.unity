@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 585749962}
   - component: {fileID: 585749963}
   - component: {fileID: 585749965}
+  - component: {fileID: 585749964}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -399,6 +400,23 @@ MonoBehaviour:
   rigidBody: {fileID: 585749962}
   animator: {fileID: 585749959}
   jumpForce: 8
+  lavaFloor: {fileID: 1119515763}
+--- !u!58 &585749964
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585749958}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3
 --- !u!61 &585749965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -412,7 +430,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09, y: -0.34}
+  m_Offset: {x: 0.050114572, y: -0.3173066}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -423,7 +441,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.01}
+  m_Size: {x: 0.27977085, y: 0.05538678}
   m_EdgeRadius: 0
 --- !u!1 &1119515760
 GameObject:
@@ -436,8 +454,9 @@ GameObject:
   - component: {fileID: 1119515762}
   - component: {fileID: 1119515761}
   - component: {fileID: 1119515763}
+  - component: {fileID: 1119515764}
   m_Layer: 0
-  m_Name: The Floor is Lava
+  m_Name: Floor (Lava)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,7 +539,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -531,8 +550,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.16, y: 0.08}
   m_EdgeRadius: 0
+--- !u!114 &1119515764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119515760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9c91e7029772b4db2b5d77d6edb1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 585749958}
 --- !u!1 &1708469610
 GameObject:
   m_ObjectHideFlags: 0

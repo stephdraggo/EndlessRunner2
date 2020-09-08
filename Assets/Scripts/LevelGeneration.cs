@@ -39,7 +39,7 @@ namespace Runner
 
         void NewPlatform()
         {
-            GameObject newSpawn = Instantiate( //make new
+            GameObject newSpawn = Instantiate( //make new platform set
                     platformPrefabs[Random.Range(0, platformPrefabs.Count)], //random prefab
                     worldParent.transform.position, //child of worldParent in world space
                     Quaternion.identity, //no rotation

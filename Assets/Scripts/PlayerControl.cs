@@ -17,6 +17,7 @@ namespace Runner
 
         public float jumpForce;
 
+        public Collider2D lavaFloor;
         #endregion
         void Start()
         {
@@ -29,6 +30,7 @@ namespace Runner
             //speed up time
 
             //die on collision with ground
+
 
             //figure out how to only jump when not jumping
 
@@ -47,5 +49,15 @@ namespace Runner
 
             }
         }
+        /*
+        public void OnTriggerEnter(Collider collider)
+        {
+            Debug.Log("triggered a collision");
+            if (collider == lavaFloor)
+            {
+                Debug.Log("hit lava and died");
+            }
+        }
+        */
     }
 }
