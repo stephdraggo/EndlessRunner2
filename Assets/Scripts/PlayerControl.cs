@@ -17,7 +17,9 @@ namespace Runner
 
         public float jumpForce;
 
-        public Collider2D lavaFloor;
+        public Collider2D lavaFloor, deathCeiling;
+
+        public Menus menus;
         #endregion
         void Start()
         {
@@ -49,15 +51,15 @@ namespace Runner
 
             }
         }
-        /*
-        public void OnTriggerEnter(Collider collider)
+
+        public void OnTriggerEnter2D(Collider2D collider)
         {
-            Debug.Log("triggered a collision");
-            if (collider == lavaFloor)
+            if (collider == lavaFloor || collider == deathCeiling)
             {
-                Debug.Log("hit lava and died");
+                menus.GameOver();
             }
         }
-        */
+
+
     }
 }

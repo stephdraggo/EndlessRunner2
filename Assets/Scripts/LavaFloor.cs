@@ -22,14 +22,6 @@ namespace Runner
         }
 
 
-        //neither of these work, why?
-        void OnTriggerEnter(Collider collider)
-        {
-            Debug.Log("triggered a collision");
-        }
-        void OnCollisionEnter()
-        {
-            Debug.Log("collided with something");
-        }
+
     }
 }
