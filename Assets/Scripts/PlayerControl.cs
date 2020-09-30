@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Runner
@@ -18,6 +19,7 @@ namespace Runner
         public float jumpForce;
 
         public Collider2D lavaFloor, deathCeiling;
+        public Collider2D[] deathObjects;
 
         public Menus menus;
         #endregion
@@ -54,7 +56,7 @@ namespace Runner
 
         public void OnTriggerEnter2D(Collider2D collider)
         {
-            if (collider == lavaFloor || collider == deathCeiling)
+            if (deathObjects.Contains(collider))
             {
                 menus.GameOver();
             }
