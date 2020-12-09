@@ -12,11 +12,6 @@ public class Menus : MonoBehaviour
         gameOverPanel.SetActive(false);
     }
 
-    void Update()
-    {
-        
-    }
-
     public void GameOver()
     {
         Time.timeScale = 0;
